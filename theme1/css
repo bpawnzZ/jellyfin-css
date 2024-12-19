@@ -1,0 +1,201 @@
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/scyfin-theme.css');
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/disable-static-drawer.css');
+@import url('https://cdn.jsdelivr.net/gh/loof2736/scyfin@latest/CSS/theme-snow.css');
+
+/* Custom Google Font with more variety */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&family=Orbitron:wght@400;500;700&display=swap');
+
+/* Root Variables for Custom Color Scheme */
+:root {
+--custom-primary-color: #3498db;
+--custom-secondary-color: #2ecc71;
+--custom-accent-color: #e74c3c;
+--custom-background-dark: #1a1a2e;
+--custom-background-light: #16213e;
+}
+
+/* Enhanced Global Styling */
+body, h1, h2, h3, h4 {
+font-family: 'Quicksand', sans-serif;
+letter-spacing: 0.5px;
+text-rendering: optimizeLegibility;
+}
+
+.emby-textarea {
+font-family: monospace;
+font-size: 10pt;
+}
+
+/* Unique Hover and Interaction Effects */
+@media (hover: hover) and (pointer: fine) {
+.paper-icon-button-light:hover:not(:disabled) {
+color: var(--custom-secondary-color) !important;
+transform: scale(1.2) rotate(5deg);
+transition: all 0.3s ease;
+}
+}
+
+/* Enhanced Button Styles */
+.emby-button {
+transition: all 0.3s ease;
+border-radius: 15px !important;
+text-transform: uppercase;
+font-weight: 600;
+}
+
+#skipIntro {
+&.upNextContainer {
+background-color: transparent !important;
+backdrop-filter: none !important;
+}
+
+.emby-button {
+border-radius: 100px !important;
+background-color: rgba(0, 0, 0, 0.7) !important;
+
+&:hover, &:focus {
+background-color: rgba(151, 151, 151, 0.7) !important;
+}
+}
+}
+
+#skipIntro .emby-button:hover {
+background: rgb(var(--accent));
+box-shadow: 0 0 8px rgba(151, 151, 151, 0.6);
+filter: brightness(1.2);
+transform: translateY(-3px);
+}
+
+#skipIntro .emby-button:focus {
+background: rgb(var(--accent));
+box-shadow: 0 0 8px rgba(151, 151, 151, 0.6);
+}
+
+/* Modernized Backdrop and Detail Views */
+.backdropContainer {
+height: 85vh;
+filter: brightness(0.8);
+transition: filter 0.3s ease;
+}
+
+.backdropContainer:hover {
+filter: brightness(1);
+}
+
+.detailRibbon {
+background: linear-gradient(to top, var(--custom-background-dark), transparent) !important;
+}
+
+.layout-desktop .detailPageContent {
+padding-left: 3.3% !important;
+padding-right: 3.3% !important;
+}
+
+/* Enhanced Login Page */
+#loginPage {
+background: linear-gradient(45deg, var(--custom-background-dark), var(--custom-background-light)) !important;
+background-size: 400% 400% !important;
+animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+0% {background-position: 0% 50%;}
+50% {background-position: 100% 50%;}
+100% {background-position: 0% 50%;}
+}
+
+/* Card and Item Styling */
+.listItemImage-large {
+border-radius: 15px;
+box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+transition: transform 0.3s ease;
+}
+
+.listItemImage-large:hover {
+transform: scale(1.05);
+}
+
+/* Slider and Progress Enhancements */
+.mdl-slider::-webkit-slider-thumb {
+background: #fff;
+}
+
+.mdl-slider-background-flex {
+height: 9px !important;
+background: hsla(0,0%,100%,.15) !important;
+backdrop-filter: blur(15px);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1599px) {
+.playlistContainer {
+display: grid;
+grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+gap: 15px;
+}
+}
+
+/* Additional Unique Touches */
+.countIndicator, .fullSyncIndicator, .mediaSourceIndicator, .playedIndicator {
+background: #fff;
+font-family: 'Orbitron', sans-serif;
+}
+
+.layout-desktop .mainDetailButtons .btnPlay::after {
+content: "Lire" !important;
+}
+
+/* Hide Unnecessary Elements */
+.trackSelections,
+.itemTags,
+.itemExternalLinks,
+.btnPlayTrailer,
+.btnPlaystate,
+.btnPreviousChapter,
+.btnNextChapter,
+.iconOsd,
+.videoOsdBottom .buttons .mediaInfoCriticRating,
+.videoOsdBottom .buttons .mediaInfoItem,
+.mediaInfoCriticRatingFresh,
+.mediaInfoCriticRatingRotten,
+.alphaPicker {
+display: none;
+}
+
+/* Additional Mobile and Responsive Styles */
+.layout-mobile .itemBackdrop {
+margin-top: 0px;
+}
+
+.layout-mobile .detailSectionContent {
+padding: 0px 20px !important;
+}
+
+.headerTabs {
+backdrop-filter: blur !important;
+}
+
+/* Other existing styles from the original theme */
+.mainDetailButtons {
+margin-right: 3.3%;
+}
+
+.emby-scroller {
+margin-right: 0% !important;
+}
+
+/* Additional specific styles */
+.selectionCommandsPanel {
+background-color: rgb(21, 21, 21) !important;
+}
+
+.sectionTabs {
+background: transparent !important;
+}
+
+/* Login Background */
+#loginPage {
+background: url(https://i.imgur.com/EIu7XYn.png) !important;
+background-size: cover !important;
+background-position: center !important;
+}
